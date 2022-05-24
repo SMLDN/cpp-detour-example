@@ -9,8 +9,8 @@ public:
 void doMain() {
     void* uua;
     Target* zP = reinterpret_cast<Target*>(0x0074FE48);// this pointer
-    zP->load = (Target::_load)0x007f1451;
-    (*zP).load(zP, &uua, "inject by zdn");
+    zP->target_func = (Target::_target_func)0x007f1451;
+    (*zP).target_func(zP, &uua, "inject by zdn");
     //auto fp = &Target::load;
     //(*zP.*fp)("injecte by zdn");
 }
